@@ -1,11 +1,11 @@
-public class studentDetails {
+public class StudentDetails {
    private int id;
     private String name;
     private int age;
     private String course;
     private double gpa;
 
-    public studentDetails(int id, String name, int age, String course, double gpa) {
+    public StudentDetails(int id, String name, int age, String course, double gpa) {
         this.id = id;
         this.name = name;
         this.age = age;

@@ -1,24 +1,24 @@
 import java.util.ArrayList;
 
-public class studentManager {
-    private ArrayList<studentDetails> students;
+public class StudentManager {
+    private ArrayList<StudentDetails> students;
 
-    public studentManager() {
+    public StudentManager() {
         students = new ArrayList<>();
     }
 
-   public void addStudent(studentDetails s){
+   public void addStudent(StudentDetails s){
         students.add(s);
 
    }
 
     public void listAllStudents(){
-        for (studentDetails s : students)
+        for (StudentDetails s : students)
             System.out.println(s);
     }
 
-    public studentDetails findStudentById(int id){
-        for(studentDetails s: students){
+    public StudentDetails findStudentById(int id){
+        for(StudentDetails s: students){
             if(s.getId()== id){
                 return s;
             }
@@ -26,9 +26,9 @@ public class studentManager {
         return null;
     }
 
-    public ArrayList<studentDetails> findStudentByCourse(String Course) {
-        ArrayList<studentDetails> filtered = new ArrayList<>();
-        for(studentDetails s: students){
+    public ArrayList<StudentDetails> findStudentByCourse(String Course) {
+        ArrayList<StudentDetails> filtered = new ArrayList<>();
+        for(StudentDetails s: students){
             if(s.getCourse().equals(Course)){
 
             }
@@ -36,7 +36,7 @@ public class studentManager {
         return filtered;
     }
 
-  public boolean updateStudent(studentDetails updatedStudent){
+  public boolean updateStudent(StudentDetails updatedStudent){
         for(int i = 0; i < students.size(); i++){
             if(students.get(i).getId() == updatedStudent.getId()){
                 students.set(i, updatedStudent);
@@ -47,7 +47,7 @@ public class studentManager {
   }
 
    public boolean removeStudent(int id){
-        for(studentDetails s: students){
+        for(StudentDetails s: students){
             if(s.getId() == id){
                 students.remove(s);
                 return true;

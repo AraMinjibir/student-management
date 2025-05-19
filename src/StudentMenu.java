@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
-public class studentMenu {
+public class StudentMenu {
     public static void collection() {
         Scanner scanner = new Scanner(System.in);
-        studentManager manage = new studentManager();
+        StudentManager manage = new StudentManager();
         boolean running = true;
 
         while (running) {
@@ -34,7 +34,7 @@ public class studentMenu {
                     double gpa = scanner.nextDouble();
                     scanner.nextLine();
 
-                    studentDetails newStudent = new studentDetails(studentID, studentName, age, course, gpa);
+                    StudentDetails newStudent = new StudentDetails(studentID, studentName, age, course, gpa);
                     manage.addStudent(newStudent);
                     System.out.println("Student Added Successfully!");
                     break;
@@ -55,7 +55,7 @@ public class studentMenu {
                     System.out.println("Enter Student ID to update: ");
                     int updateId =  scanner.nextInt();
                     scanner.nextLine();
-                    studentDetails found = manage.findStudentById(updateId);
+                    StudentDetails found = manage.findStudentById(updateId);
 
                     if(found == null) {
                         System.out.println("Student not Found!");
@@ -71,7 +71,7 @@ public class studentMenu {
                     System.out.println("Enter gpa: ");
                     double newGpa = scanner.nextDouble();
                     scanner.nextLine();
-                    studentDetails updatedStudent = new studentDetails(updateId, newName, newAge, newCourse, newGpa);
+                    StudentDetails updatedStudent = new StudentDetails(updateId, newName, newAge, newCourse, newGpa);
                     manage.updateStudent(updatedStudent);
                     System.out.println("Student Updated Successfully!");
                     break;
