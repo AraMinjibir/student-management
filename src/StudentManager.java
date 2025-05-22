@@ -26,16 +26,6 @@ public class StudentManager {
         return null;
     }
 
-    public ArrayList<StudentDetails> findStudentByCourse(String Course) {
-        ArrayList<StudentDetails> filtered = new ArrayList<>();
-        for(StudentDetails s: students){
-            if(s.getCourse().equals(Course)){
-
-            }
-        }
-        return filtered;
-    }
-
   public boolean updateStudent(StudentDetails updatedStudent){
         for(int i = 0; i < students.size(); i++){
             if(students.get(i).getId() == updatedStudent.getId()){
